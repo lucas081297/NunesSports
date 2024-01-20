@@ -1,0 +1,57 @@
+<section *ngIf="!isAdd">
+  <table>
+    <thead>
+      <tr>
+        <th>Cod.</th>
+        <th>Nome</th>
+        <th>Preço</th>
+        <th>Descrição</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="info_products" *ngFor="let product of allProducts">
+        <td>{{product.cod}}</td>
+        <td>{{product.nome}}</td>
+        <td>{{product.preco}}</td>
+        <td>{{product.descricao}}</td>
+        <td></td>
+        <td *ngIf="editNumber==product.cod"></td>
+        <td *ngIf="editNumber==product.cod" class="editForm">{{product.cod}}</td>
+        <td *ngIf="editNumber==product.cod" class="editForm"><form [formGroup]="changeForm"><input formControlName="newName" type="text" placeholder="{{product.nome}}"></form></td>
+        <td *ngIf="editNumber==product.cod" class="editForm"><form [formGroup]="changeForm"><input formControlName="newPrice" type="number" placeholder="{{product.preco}}"></form></td>
+        <td *ngIf="editNumber==product.cod" class="editForm"><form [formGroup]="changeForm"><textarea formControlName="newDesc" cols="30" rows="5" placeholder="{{product.descricao}}"></textarea></form></td>
+        <td *ngIf="editNumber==product.cod" class="editForm"></td>
+        <td>
+          <div>
+            <p *ngIf="editNumber==-1"><img src="../../../assets/delete_icon.svg" alt="Deletar" (click)="deleteProduct(product.cod,product.nome)"></p>
+            <p *ngIf="editNumber!=product.cod"><img src="../../../assets/create_edit_pencil_write_icon.svg" alt="Editar" (click)="editProduct(product.cod)"></p>
+            <p *ngIf="editNumber==product.cod"><img src="../../../assets/check_icon.png" alt="Salvar" (click)="saveProduct()"></p>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+    <p *ngIf="editNumber==-1"><img src="../../../assets/add_circle_ic_icon.svg" alt="Adiconar Produto" (click)="addProduct()"></p>
+  </div>
+</section>
+<section *ngIf="isAdd" class="addProduct">
+  <h1>Cadastro de produto</h1>
+  <div>
+    <form [formGroup]="addForm" >
+      <label>Nome</label>
+      <br>
+      <input formControlName="newName" type="text" name="" id="">
+      <br>
+      <label>Preço</label>
+      <br>
+      <input formControlName="newPrice" type="number" name="" id="">
+      <br>
+      <label>Descrição</label>
+      <br>
+      <textarea formControlName="newDesc" cols="30" rows="2"></textarea>
+      <div><img src="../../../assets/check_icon.png" alt="Salvar" (click)="saveNewProduct()"></div>
+    </form>
+  </div>
+</section>

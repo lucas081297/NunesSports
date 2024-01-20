@@ -1,1 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+@import "node_modules/@costlydeveloper/ngx-awesome-popup/styles/theme";
+
+body{
+  margin: 0%;
+  margin-left: 5px;
+  background: rgb(255, 166, 0) 14.7%
+}

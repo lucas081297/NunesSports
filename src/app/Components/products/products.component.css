@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&display=swap');
+
+
+section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgb(255, 99, 97) 73%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead, tbody, tr, th { display: block; }
+
+tr:after {
+  content: ' ';
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+
+thead{
+  background: linear-gradient(99deg, rgb(255, 166, 0) 14.7%, rgb(255, 99, 97) 73%);
+  border-top-left-radius: 5px;
+}
+
+thead th {
+  height: 20px;
+  text-transform: uppercase;
+}
+
+tbody {
+  height: 68vh;
+  overflow-y: auto;
+  background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+}
+
+tbody td, thead th {
+  width: 16.2%;
+  float: left;
+}
+
+.info_products tr, .info_products td{
+  margin-top: 3em;
+  margin-bottom: 3em;
+  display: flex;
+  justify-content: center;
+
+}
+
+.info_products{
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-family: "Anton", sans-serif;
+  font-weight: 10;
+  text-transform: uppercase;
+  background: linear-gradient(109.6deg, rgb(255, 207, 84) 11.2%, rgb(255, 158, 27) 91.1%);
+}
+
+.info_products td{
+  height: 30px;
+  vertical-align: middle;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+td div{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+p{
+  overflow: hidden;
+  margin: 15px;
+}
+
+p img{
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+input,textarea{
+  background-color: transparent;
+  text-align: center;
+  border-color: white;
+  width: 100%;
+  text-transform: uppercase;
+  font-family: "Anton", sans-serif;
+}
+
+input::placeholder, textarea::placeholder{
+  color: black;
+}
+
+textarea{
+  padding-top: 40px;
+  resize: none;
+}
+
+input:focus, textarea:focus{
+  border: 3px solid black;
+  caret-color: grey;
+}
+
+.addProduct{
+  display: block;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: transparent;
+  margin-right: 10px;
+}
+
+.addProduct form{
+  width: 100%;
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 3px solid black;
+  height: 50vh;
+  background-color: rgb(238, 107, 14);
+  margin-right: 10px;
+}
+
+.addProduct h1{
+  display: flex;
+  justify-content: center;
+  color: white;
+  background-color: transparent;
+}
+
+.addProduct label{
+  color: white;
+  text-transform: uppercase;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+}
+
+.addProduct input, .addProduct textarea{
+  border: solid 2px black;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 50%;
+  color: white;
+}
+
+form div img{
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+form div{
+  margin-bottom: 20px;
+}

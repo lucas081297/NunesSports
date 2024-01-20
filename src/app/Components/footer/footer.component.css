@@ -1,0 +1,47 @@
+section{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #000000e8;
+  color: white;
+  height: 40px;
+  font-size: 15px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+section a{
+  text-decoration: none;
+}
+
+section a:visited{
+  text-decoration: none;
+  color: white;
+}
+
+.help{
+  margin-top: 0.3rem;
+  margin-left: 0.3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.help a{
+  margin-right: 1em;
+  display: flex;
+}
+
+.name-dev{
+  align-items: center;
+  display: flex;
+  margin-bottom: .2rem;
+}
+
+.name-dev{
+  display: flex;
+  justify-content: center;
+}
+
+table{
+  width: 100%;
+}
