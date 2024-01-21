@@ -26,6 +26,7 @@
           <div>
             <p *ngIf="editNumber==-1"><img src="../../../assets/delete_icon.svg" alt="Deletar" (click)="deleteProduct(product.cod,product.nome)"></p>
             <p *ngIf="editNumber!=product.cod"><img src="../../../assets/create_edit_pencil_write_icon.svg" alt="Editar" (click)="editProduct(product.cod)"></p>
+            <p *ngIf="editNumber==product.cod"><img src="../../../assets/cancel_icon.png" alt="Cancelar" (click)="editNumber=-1"></p>
             <p *ngIf="editNumber==product.cod"><img src="../../../assets/check_icon.png" alt="Salvar" (click)="saveProduct()"></p>
           </div>
         </td>
@@ -52,6 +53,7 @@
       <br>
       <textarea formControlName="newDesc" cols="30" rows="2"></textarea>
       <div><img src="../../../assets/check_icon.png" alt="Salvar" (click)="saveNewProduct()"></div>
+      <div><img src="../../../assets/cancel_icon.png" alt="Salvar" (click)="isAdd=false"></div>
     </form>
   </div>
 </section>

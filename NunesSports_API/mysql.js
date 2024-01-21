@@ -1,4 +1,4 @@
-const { execute } = require('@angular-devkit/build-angular/src/builders/extract-i18n');
+//const { execute } = require('@angular-devkit/build-angular/src/builders/extract-i18n');
 const mysql = require('mysql2');
 require('dotenv').config();
 

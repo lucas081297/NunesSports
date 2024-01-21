@@ -6,7 +6,7 @@ exports.getAllProducts = async (req,res,next)=>{
     const result = await mysql.execute('SELECT * FROM Produtos')
     return res.status(200).json(result);
   } catch(error){
-    return res.send(500).json(error)
+    return res.status(500).json(error)
   }
 }
 
